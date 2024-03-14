@@ -1,0 +1,164 @@
+body{
+    box-sizing: border-box;
+}
+section{
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+ul{
+    padding: 1rem;
+}
+li{
+    padding: 1rem;
+}
+article{
+    padding: 1rem;
+}
+
+/* +++++-----+++++---- Section one -----+++++-----++++++ */
+.one-flex{
+    background-color: rgb(217, 217, 217);
+    display: flex;
+    flex-direction: column;
+}
+.one-title{
+    background-color: rgb(101, 100, 100);
+}
+.one-ul{
+    background: gainsboro;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.one-li{
+    background-color: rgb(71, 71, 71);
+    color: white;
+}
+@media (min-width: 601px) {
+    .one-flex{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+@media (min-width: 900px) {
+    .one-ul{
+        flex-direction: row;
+    }
+}
+
+/* +++++-----+++++---- Section two -----+++++-----++++++ */
+.two-flex{
+    background-color: rgb(17, 68, 116);
+    display: flex;
+    flex-direction: column;
+}
+.two-title{
+    background-color: rgb(80, 130, 130);
+}
+.two-article{
+    background-color: rgb(139, 221, 193);
+}
+.two-p{
+    background-color: rgb(206, 252, 252);
+}
+.button-box{
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(57, 57, 223);
+    padding: 1rem;
+}
+.btn-two-a{
+    background-color: aqua;
+}
+.btn-two-b{
+    background-color: rgb(188, 77, 77);
+}
+@media (min-width: 601px) {
+    .button-box{
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+@media (min-width: 900px) {
+    .two-article{
+        display: flex;
+        gap: 1rem;
+    }
+    .button-box{
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+}
+
+/* +++++-----+++++---- Section tree -----+++++-----++++++ */
+
+.tree-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* cuatro columnas */
+
+    background-color: green;
+}
+.tree-title{
+    grid-column: 1/-1; /* 1/-1 para decir que ocupe todas las columnas*/
+
+    background-color: greenyellow;
+}
+.tree-article{
+    grid-column: 1/5; /* 1/5 para decir que ocupe todas las columnas*/
+
+    background-color: rgb(0, 255, 200);
+}
+.tree-p{
+    background-color: rgb(188, 217, 188);
+}
+.button-box-grid{
+    grid-column: 1/-1;
+
+    display: grid;
+    place-items: center; /* la forma más sencilla de alinear contenido al centro */
+
+    background-color: rgb(180, 204, 143);
+    margin-top: 1rem;
+}
+.btn-tree-a{
+    background-color: aqua;
+}
+.btn-tree-b{
+    background-color: rgb(188, 77, 77);
+}
+@media (min-width: 601px) {
+    .tree-grid{
+        grid-template-columns: repeat(8, 1fr); /* ocho columnas */
+    }
+    .tree-article{
+        grid-column: 2/-2; 
+    }
+    .button-box-grid{
+        grid-column: 1/-1;
+    
+        display: grid;
+        grid-template-columns: repeat(8, 1fr); /* creamos una grilla dentro de otra */
+    }
+    .btn-tree-a{
+        grid-column: 1/5;
+    }
+    .btn-tree-b{
+        grid-column: 5/9;
+    }
+}
+@media (min-width: 900px) {
+    .tree-grid{
+        grid-template-columns: repeat(12, 1fr); /* ocho columnas */
+    }
+    .tree-article{
+        grid-column: 2/-2; 
+    }
+    .button-box-grid{
+        grid-column: 3/-3;
+    
+        display: flex; /* cambiamos de grid a flex */
+        justify-content: flex-end;
+        gap: 5px;
+    }
+}
